@@ -17,7 +17,7 @@ const timerHTML = document.querySelector('.timer');
 
 // Styles
 timerHTML.style.display = 'flex';
-timerHTML.style.fontSize = '50px';
+timerHTML.style.fontSize = '80px';
 timerHTML.style.color = 'indigo';
 timerHTML.style.justifyContent = 'space-around';
 timerHTML.style.margin = '80px';
