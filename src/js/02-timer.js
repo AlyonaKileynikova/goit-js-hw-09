@@ -1,10 +1,12 @@
 import flatpickr from 'flatpickr';
 import "flatpickr/dist/flatpickr.min.css";
 
+import Notiflix from 'notiflix';
+
 const selectedDates = document.querySelector('input#datetime-picker');
 
 const startCounterBtn = document.querySelector('[data-start]');
-startCounterBtn.disabled = true;
+// startCounterBtn.disabled = true;
 
 const counterDays = document.querySelector('[data-days]');
 const counterHours = document.querySelector('[data-hours]');
@@ -35,19 +37,20 @@ const options = {
 
       //проверка даты в будущем:
       if (selectedDates[0] < new Date()) {
-        window.alert('Please choose a date in the future');
+        // window.alert('Please choose a date in the future');
+        Notiflix.Notify.warning('Please choose a date in the future');
         startCounterBtn.disabled = true;
       } else {
         startCounterBtn.disabled = false;
       }
 
-      console.log("currentDate: ", currentDate);
+      console.log('currentDate: ', new Date());
       console.log('selectedDates[0] : ', selectedDates[0]);
       
 
         // startCounterBtn.disabled = false;
         //слухач на кнопку
-        startCounterBtn.addEventListener('click', onClick);
+        // startCounterBtn.addEventListener('click', onClick);
     }
 };
 
